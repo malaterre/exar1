@@ -1,0 +1,5 @@
+ % git remote add protocols git@github.com:spine-generic/protocols.git
+ % git remote add mri_protocol git@github.com:lrq3000/mri_protocol.git
+ % git remote update
+ % git checkout mri_protocol/master -- SiemensVidaProtocol
+ % git checkout protocols/main -- Siemens
