@@ -19,14 +19,14 @@ e1      "### ASCCONV BEGIN "
 e2      " ###"
 e3	"### ASCCONV END ###"
  /* this one starts with double underscore */
-e4	"__attribute__"
+e4	"__attribute__.size"
  /* most starts with lower case, except: MaxOnlineTxAmpl, CompProtectionValues ... */
 e8	{letter}({letter}|{digit}|_)+
 
 %%
 
 "=" 					{ ECHO; return EQUAL; }
-({e8}(\[{digit}+\])?[.]?|{e4}[.])+	{ ECHO; return NAME; }
+({e8}(\[{digit}+\])?[.]?)+{e4}?		{ ECHO; return NAME; }
 \"[^"]+\"				{ yylval.string = strdup(yytext);
                                           ECHO; return STRING; }
 ([1-9][0-9]*)?[0-9](\.[0-9]*)? 		{ ECHO; return DECIMAL; }
