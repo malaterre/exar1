@@ -14,8 +14,8 @@ int yydebug=1;
 
 %}
 
-%token NAME EQUAL HEADER FOOTER HEX
-%token DECIMAL
+%token NAME EQUAL HEADER FOOTER
+%token DECIMAL HEX
 %token <string> STRING;
 
 %union {
@@ -27,19 +27,19 @@ int yydebug=1;
 %%
 
 ascconv: HEADER entries FOOTER
-    ;
+       ;
 
 entries: entry
-        | entries entry
-        ;
+       | entries entry
+       ;
 
 entry: NAME EQUAL value
      ;
 
 value: STRING
-      | DECIMAL
-      | HEX
-      ;
+     | DECIMAL
+     | HEX
+     ;
 
 %%
 
