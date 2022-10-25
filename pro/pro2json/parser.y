@@ -14,31 +14,26 @@ int yydebug=1;
 
 %}
 
-%token LCURLY RCURLY LBRAC RBRAC COMMA COLON
-%token VTRUE VFALSE VNULL
+%token LCURLY RCURLY LANGLE RANGLE SINGLESPACE ENDOFLINE KEYNAME NAME
+%token VTRUE VFALSE
 %token <string> STRING;
-%token <decimal> DECIMAL;
 
 %union {
   char *string;
-  double decimal;
 }
 
-%start json
+%start xprotocol
 
 %%
 
-json:
-    | value
+xprotocol:
+    | entry
     ;
+
+entry: LANGLE NAME RANGLE value
 
 value: object
      | STRING
-     | DECIMAL
-     | array
-     | VTRUE
-     | VFALSE
-     | VNULL
      ;
 
 object: LCURLY RCURLY
@@ -46,18 +41,10 @@ object: LCURLY RCURLY
       ;
 
 members: member
-       | members COMMA member
+       | members ENDOFLINE member
        ;
 
-member: STRING COLON value
-      ;
-
-array: LBRAC RBRAC
-     | LBRAC values RBRAC
-     ;
-
-values: value
-      | values COMMA value
+member: LANGLE KEYNAME RANGLE value
       ;
 
 %%
