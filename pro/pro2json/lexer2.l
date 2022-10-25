@@ -17,16 +17,18 @@ digit	[0-9]
 
 e1      "### ASCCONV BEGIN "
 e2      " ###"
+e3	"### ASCCONV END ###"
 
 %%
 
 "=" { ECHO; return EQUAL; }
-({lower})({letter}|{digit})* { ECHO; return NAME; }
-\"[^"]*\" { yylval.string = strdup(yytext); ECHO; return STRING; }
-[0-9]+[.]?[0-9]* { ECHO; return DECIMAL; }
-(0x[0-9]+) { ECHO; return HEX; }
-{e1}[^#]+{e2} { ECHO; return HEADER; }
-"### ASCCONV END ###" { ECHO; return FOOTER; }
+{lower}({letter}|{digit})*		{ ECHO; return NAME; }
+\"[^"]+\"				{ yylval.string = strdup(yytext);
+                                          ECHO; return STRING; }
+([1-9][0-9]*)?[0-9](\.[0-9]*)?|\.[0-9]+ { ECHO; return DECIMAL; }
+0x[0-9]+				{ ECHO; return HEX; }
+{e1}[^#]+{e2}				{ ECHO; return HEADER; }
+{e3}					{ ECHO; return FOOTER; }
 [ \t\n]+ { /* eat whitespace */ }
 
 %%
