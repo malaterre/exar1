@@ -1,5 +1,6 @@
+/* lexer2.l */
+
 %{
-// filename: lexer2.l
 #include "parser2.h"
 #include <string.h>
 
@@ -8,7 +9,10 @@ extern void yyerror(const char * message);
 
 %}
 
-%option noyywrap
+/* don't generate functions we don't need */
+%option nounput noinput noyywrap
+
+/* named regexes we can use in rules */
 
 upper	[A-Z]
 lower	[a-z]
