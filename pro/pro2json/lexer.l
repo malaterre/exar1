@@ -10,6 +10,7 @@ extern void yyerror(const char * message);
 
 %option noyywrap
 
+capital	[A-Z]
 letter	[A-Za-z]
 digit	[0-9]
 
@@ -26,7 +27,7 @@ digit	[0-9]
 "{" { ECHO; return LCURLY; }
 "}" { ECHO; return RCURLY; }
 "." { ECHO; return DOT; }
-({letter})({letter}|{digit})* { ECHO; return NAME; }
+({capital})({letter}|{digit})* { ECHO; return NAME; }
 \"[^"]*\" { yylval.string = strdup(yytext); ECHO; return STRING; }
 [1-9]+\.?[0-9]* { ECHO; return DECIMAL; }
 [ \t\n]+ { /* eat whitespace */ }
