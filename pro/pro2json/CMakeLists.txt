@@ -13,5 +13,14 @@ add_executable(pro2json
     pro2json.c
     ${BISON_MyParser_OUTPUTS}
     ${FLEX_MyScanner_OUTPUTS}
- )
- #target_link_libraries(pro2json PRIVATE ${FLEX_LIBRARIES})
+)
+
+BISON_TARGET(MyParser2 parser2.y ${CMAKE_CURRENT_BINARY_DIR}/parser2.c)
+FLEX_TARGET(MyScanner2 lexer2.l  ${CMAKE_CURRENT_BINARY_DIR}/lexer2.c)
+ADD_FLEX_BISON_DEPENDENCY(MyScanner2 MyParser2)
+
+add_executable(asc2json
+    asc2json.c
+    ${BISON_MyParser2_OUTPUTS}
+    ${FLEX_MyScanner2_OUTPUTS}
+)
