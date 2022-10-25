@@ -14,7 +14,7 @@ int yydebug=1;
 
 %}
 
-%token LCURLY RCURLY LANGLE RANGLE KEYNAME NAME
+%token LCURLY RCURLY LANGLE RANGLE KEYNAME NAME DOT
 %token DECIMAL
 %token <string> STRING;
 
@@ -31,9 +31,10 @@ xprotocol:
     ;
 
 
-value: object
+value: entry
      | STRING
      | DECIMAL
+     | array
      ;
 
 object: LCURLY RCURLY
@@ -45,7 +46,16 @@ entries: entry
        ;
 
 entry: LANGLE NAME RANGLE value
+     | LANGLE NAME DOT STRING RANGLE value
      ;
+
+array: LCURLY RCURLY
+     | LCURLY values RCURLY
+     ;
+
+values: value
+      | values value
+      ;
 
 %%
 
