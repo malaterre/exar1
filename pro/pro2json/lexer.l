@@ -27,7 +27,7 @@ digit	[0-9]
 "{" { ECHO; return LCURLY; }
 "}" { ECHO; return RCURLY; }
 \"[^"]*\" { yylval.string = strdup(yytext); ECHO; return STRING; }
-[A-Za-z]+ { ECHO; return KEYNAME; }
+[1-9]+\.?[0-9]* { ECHO; return DECIMAL; }
 [ \t\n]+ { /* eat whitespace */ }
 
 %%

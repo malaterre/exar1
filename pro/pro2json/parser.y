@@ -14,8 +14,8 @@ int yydebug=1;
 
 %}
 
-%token LCURLY RCURLY LANGLE RANGLE SINGLESPACE ENDOFLINE KEYNAME NAME
-%token VTRUE VFALSE
+%token LCURLY RCURLY LANGLE RANGLE KEYNAME NAME
+%token DECIMAL
 %token <string> STRING;
 
 %union {
@@ -30,22 +30,22 @@ xprotocol:
     | entry
     ;
 
-entry: LANGLE NAME RANGLE value
 
 value: object
      | STRING
+     | DECIMAL
      ;
 
 object: LCURLY RCURLY
-      | LCURLY members RCURLY
+      | LCURLY entries RCURLY
       ;
 
-members: member
-       | members ENDOFLINE member
+entries: entry
+       | entries entry
        ;
 
-member: LANGLE KEYNAME RANGLE value
-      ;
+entry: LANGLE NAME RANGLE value
+     ;
 
 %%
 
