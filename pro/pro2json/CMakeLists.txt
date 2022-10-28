@@ -24,3 +24,14 @@ add_executable(asc2json
     ${BISON_MyParser2_OUTPUTS}
     ${FLEX_MyScanner2_OUTPUTS}
 )
+
+# https://begriffs.com/posts/2021-11-28-practical-parsing.html
+BISON_TARGET(MyParser3 lisp.y ${CMAKE_CURRENT_BINARY_DIR}/lisp.tab.c)
+FLEX_TARGET(MyScanner3 lisp.l  ${CMAKE_CURRENT_BINARY_DIR}/lisp.lex.c)
+ADD_FLEX_BISON_DEPENDENCY(MyScanner3 MyParser3)
+
+add_executable(driver_lisp
+    driver_lisp.c
+    ${BISON_MyParser3_OUTPUTS}
+    ${FLEX_MyScanner3_OUTPUTS}
+)

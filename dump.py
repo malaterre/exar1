@@ -41,6 +41,7 @@ if True:
      print(row)
      name = row[0]
      data = row[1]
+     assert row[2] == 'DS'
      if data:
       print(name)
       print(data)

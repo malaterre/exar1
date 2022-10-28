@@ -58,7 +58,7 @@ int lisperror(const char *msg);
 
 [[:space:]]  ; /* ignore */
 
-/* this is a handy rule to return the ASCII value
+ /* this is a handy rule to return the ASCII value
    of any other character. Importantly, parens */
 
 . { return *yytext; }

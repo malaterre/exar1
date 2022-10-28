@@ -3,3 +3,6 @@
  % git remote update
  % git checkout mri_protocol/master -- SiemensVidaProtocol
  % git checkout protocols/main -- Siemens
+
+git remote add MAPT1D git@github.com:jvirostko/MAPT1D.git
+git remote add DSI-Studio-Website git@github.com:frankyeh/DSI-Studio-Website.git

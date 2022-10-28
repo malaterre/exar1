@@ -5,7 +5,7 @@
 
 #define YYSTYPE LISPSTYPE
 #include "lisp.tab.h"
-#include "lisp.lex.h"
+//#include "lisp.lex.h"
 
 void sexpr_print(struct sexpr* s, unsigned depth)
 {

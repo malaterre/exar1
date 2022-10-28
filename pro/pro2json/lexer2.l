@@ -12,6 +12,14 @@ extern void yyerror(const char * message);
 /* don't generate functions we don't need */
 %option nounput noinput noyywrap
 
+/* generate a scanner that's thread safe */
+/*%option reentrant*/
+
+/* Generate "words" rather than "yy" as a prefix, e.g.
+   wordslex() rather than yylex(). This allows multiple
+   Flex scanners to be linked with the same application */
+/*%option prefix="asc"*/
+
 /* named regexes we can use in rules */
 
 upper	[A-Z]
