@@ -16,6 +16,21 @@ import sys
 import zlib
 import json
 
+headers = [
+    'EDF V1: ContentType=syngo.MR.ExamDataFoundation.Data.EdfAddInConfigContent;',
+    'EDF V1: ContentType=syngo.MR.ExamDataFoundation.Data.EdfDecisionStepContent;',
+    'EDF V1: ContentType=syngo.MR.ExamDataFoundation.Data.EdfDirectoryContent;',
+    'EDF V1: ContentType=syngo.MR.ExamDataFoundation.Data.EdfInteractionStepContent;',
+    'EDF V1: ContentType=syngo.MR.ExamDataFoundation.Data.EdfJoinStepContent;',
+    'EDF V1: ContentType=syngo.MR.ExamDataFoundation.Data.EdfMeasurementStepContent;',
+    'EDF V1: ContentType=syngo.MR.ExamDataFoundation.Data.EdfPauseStepContent;',
+    'EDF V1: ContentType=syngo.MR.ExamDataFoundation.Data.EdfProgramContent;',
+    'EDF V1: ContentType=syngo.MR.ExamDataFoundation.Data.EdfProtocolContent;',
+    'EDF V1: ContentType=syngo.MR.ExamDataFoundation.Data.EdfSplitStepContent;',
+    'EDF V1: ContentType=syngo.MR.ExamDataFoundation.Data.EdfStringContent;',
+    'EDF V1: ContentType=syngo.MR.ExamDataFoundation.Data.EdfStructureContent;',
+    'EDF V1: ContentType=syngo.MR.ExamDataFoundation.Data.EdfWorkflowStepContent;'
+]
 filename = sys.argv[1]
 table = 'Content'
 
@@ -33,6 +48,8 @@ for row in rows:
     # skip first line:
     # 'EDF V1: ContentType=syngo.MR.ExamDataFoundation.Data.EdfAddInConfigContent;'
     lines = str_data.splitlines(keepends=True)
+    header = lines[0].strip()
+    assert header in headers
     json_str = ''.join(lines[1:])
     # make sure this is JSON before writing it:
     json_data = json.loads(json_str)
