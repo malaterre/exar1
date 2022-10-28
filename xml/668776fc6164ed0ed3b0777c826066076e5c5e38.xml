@@ -1,0 +1,11 @@
+EDF V1: ContentType=syngo.MR.ExamDataFoundation.Data.EdfStringContent;
+{
+  "$id": "1",
+  "Dates": {
+    "$id": "2"
+  },
+  "Texts": {
+    "$id": "3",
+    "": "tof_fl3d_tra"
+  }
+}

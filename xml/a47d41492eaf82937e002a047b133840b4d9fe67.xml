@@ -1,0 +1,12 @@
+EDF V1: ContentType=syngo.MR.ExamDataFoundation.Data.EdfStringContent;
+{
+  "$id": "1",
+  "Dates": {
+    "$id": "2",
+    "": "2019-03-11T11:49:11.9609633Z"
+  },
+  "Texts": {
+    "$id": "3",
+    "": "ep2d_diff_mddw_64_p2_s4_b1000_AP_DO_NOT_READJUST"
+  }
+}

@@ -1,0 +1,9 @@
+EDF V1: ContentType=syngo.MR.ExamDataFoundation.Data.EdfDirectoryContent;
+{
+  "$id": "1",
+  "BodyPartExamined": "",
+  "IsProtected": false,
+  "Laterality": "",
+  "Password": "",
+  "TablePositioningMode": ""
+}

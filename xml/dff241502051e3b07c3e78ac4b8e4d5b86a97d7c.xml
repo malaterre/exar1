@@ -1,0 +1,6 @@
+EDF V1: ContentType=syngo.MR.ExamDataFoundation.Data.EdfDecisionStepContent;
+{
+  "$id": "1",
+  "ConditionId": "d1c9a18f-971f-49bb-8b7a-8ce56cd7f620",
+  "OpenBeforeStart": true
+}

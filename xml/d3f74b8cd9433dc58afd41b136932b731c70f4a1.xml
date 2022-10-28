@@ -1,0 +1,5 @@
+EDF V1: ContentType=syngo.MR.ExamDataFoundation.Data.EdfInteractionStepContent;
+{
+  "$id": "1",
+  "OpenBeforeStart": true
+}

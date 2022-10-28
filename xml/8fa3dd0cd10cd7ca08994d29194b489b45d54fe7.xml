@@ -1,0 +1,38 @@
+EDF V1: ContentType=syngo.MR.ExamDataFoundation.Data.EdfStructureContent;
+{
+  "$id": "1",
+  "ParentDirectoryId": {
+    "$id": "2",
+    "d26dfc14-4e77-4b2a-b153-ffed9235d841": "00000000-0000-0000-0000-000000000000",
+    "daa59fe9-9c17-492d-a000-6071578e9bc4": "d26dfc14-4e77-4b2a-b153-ffed9235d841"
+  },
+  "ProgramElementIds": {
+    "$id": "3",
+    "$values": []
+  },
+  "RootDirectoryId": "d26dfc14-4e77-4b2a-b153-ffed9235d841",
+  "SubdirectoryIds": {
+    "$id": "4",
+    "d26dfc14-4e77-4b2a-b153-ffed9235d841": {
+      "$id": "5",
+      "$values": [
+        "daa59fe9-9c17-492d-a000-6071578e9bc4"
+      ]
+    },
+    "daa59fe9-9c17-492d-a000-6071578e9bc4": {
+      "$id": "6",
+      "$values": []
+    }
+  },
+  "SubprogramElementIds": {
+    "$id": "7",
+    "d26dfc14-4e77-4b2a-b153-ffed9235d841": {
+      "$id": "8",
+      "$values": []
+    },
+    "daa59fe9-9c17-492d-a000-6071578e9bc4": {
+      "$id": "9",
+      "$values": []
+    }
+  }
+}

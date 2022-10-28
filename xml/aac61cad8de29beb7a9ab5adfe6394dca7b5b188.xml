@@ -1,0 +1,19 @@
+EDF V1: ContentType=syngo.MR.ExamDataFoundation.Data.EdfPauseStepContent;
+{
+  "$id": "1",
+  "ApplyContrastAgent": false,
+  "ContrastAgent": {
+    "$id": "2",
+    "ActiveIngredient": "",
+    "CodeValue": "",
+    "CodingScheme": "",
+    "Comment": "",
+    "Concentration": "",
+    "Dilution": "",
+    "IsGiven": false,
+    "Name": "",
+    "TotalDose": "",
+    "Volume": ""
+  },
+  "ContrastAgentName": ""
+}

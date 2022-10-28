@@ -1,0 +1,12 @@
+EDF V1: ContentType=syngo.MR.ExamDataFoundation.Data.EdfStringContent;
+{
+  "$id": "1",
+  "Dates": {
+    "$id": "2",
+    "": "2018-11-26T13:39:12.0665313Z"
+  },
+  "Texts": {
+    "$id": "3",
+    "": "t2_tse_tra_512_p2_fast"
+  }
+}

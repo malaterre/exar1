@@ -1,0 +1,20 @@
+EDF V1: ContentType=syngo.MR.ExamDataFoundation.Data.EdfMeasurementStepContent;
+{
+  "$id": "1",
+  "BodyPartExamined": "",
+  "ImageComment": "",
+  "Laterality": "U",
+  "OpenBeforeStart": false,
+  "StudyParts": {
+    "$id": "2",
+    "$values": []
+  },
+  "VoiceCommands": {
+    "$id": "3",
+    "AreValid": true,
+    "Pause": "00:00:00",
+    "PostSoundId": "",
+    "PreSoundId": "",
+    "VoiceCommandsType": 0
+  }
+}

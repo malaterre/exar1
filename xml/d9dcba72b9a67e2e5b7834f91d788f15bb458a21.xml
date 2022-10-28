@@ -1,0 +1,12 @@
+EDF V1: ContentType=syngo.MR.ExamDataFoundation.Data.EdfStringContent;
+{
+  "$id": "1",
+  "Dates": {
+    "$id": "2",
+    "": "2018-12-03T12:57:34.5870014Z"
+  },
+  "Texts": {
+    "$id": "3",
+    "": "t2_space_dark-fluid_sag_p2_cp4_ns-IR_0.5x0.5x1.0_mtc_varflipangl"
+  }
+}

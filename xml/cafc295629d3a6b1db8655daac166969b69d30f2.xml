@@ -1,0 +1,12 @@
+EDF V1: ContentType=syngo.MR.ExamDataFoundation.Data.EdfStringContent;
+{
+  "$id": "1",
+  "Dates": {
+    "$id": "2",
+    "en": "2018-08-16T05:28:08.0808223Z"
+  },
+  "Texts": {
+    "$id": "3",
+    "en": "Please cover cortical and cerebellum"
+  }
+}

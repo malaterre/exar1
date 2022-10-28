@@ -1,0 +1,65 @@
+EDF V1: ContentType=syngo.MR.ExamDataFoundation.Data.EdfStructureContent;
+{
+  "$id": "1",
+  "ParentDirectoryId": {
+    "$id": "2",
+    "08f4d8b9-9a68-4463-9867-4cf78a4407c0": "ef216110-9293-4c4f-a126-2260a05fe48b",
+    "31ff2d3f-5ffa-47fb-a25e-7b0bde41dbd3": "08f4d8b9-9a68-4463-9867-4cf78a4407c0",
+    "d26dfc14-4e77-4b2a-b153-ffed9235d841": "00000000-0000-0000-0000-000000000000",
+    "daa59fe9-9c17-492d-a000-6071578e9bc4": "d26dfc14-4e77-4b2a-b153-ffed9235d841",
+    "ef216110-9293-4c4f-a126-2260a05fe48b": "daa59fe9-9c17-492d-a000-6071578e9bc4"
+  },
+  "ProgramElementIds": {
+    "$id": "3",
+    "$values": [
+      "31ff2d3f-5ffa-47fb-a25e-7b0bde41dbd3"
+    ]
+  },
+  "RootDirectoryId": "d26dfc14-4e77-4b2a-b153-ffed9235d841",
+  "SubdirectoryIds": {
+    "$id": "4",
+    "08f4d8b9-9a68-4463-9867-4cf78a4407c0": {
+      "$id": "5",
+      "$values": []
+    },
+    "d26dfc14-4e77-4b2a-b153-ffed9235d841": {
+      "$id": "6",
+      "$values": [
+        "daa59fe9-9c17-492d-a000-6071578e9bc4"
+      ]
+    },
+    "daa59fe9-9c17-492d-a000-6071578e9bc4": {
+      "$id": "7",
+      "$values": [
+        "ef216110-9293-4c4f-a126-2260a05fe48b"
+      ]
+    },
+    "ef216110-9293-4c4f-a126-2260a05fe48b": {
+      "$id": "8",
+      "$values": [
+        "08f4d8b9-9a68-4463-9867-4cf78a4407c0"
+      ]
+    }
+  },
+  "SubprogramElementIds": {
+    "$id": "9",
+    "08f4d8b9-9a68-4463-9867-4cf78a4407c0": {
+      "$id": "10",
+      "$values": [
+        "31ff2d3f-5ffa-47fb-a25e-7b0bde41dbd3"
+      ]
+    },
+    "d26dfc14-4e77-4b2a-b153-ffed9235d841": {
+      "$id": "11",
+      "$values": []
+    },
+    "daa59fe9-9c17-492d-a000-6071578e9bc4": {
+      "$id": "12",
+      "$values": []
+    },
+    "ef216110-9293-4c4f-a126-2260a05fe48b": {
+      "$id": "13",
+      "$values": []
+    }
+  }
+}

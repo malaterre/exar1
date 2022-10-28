@@ -1,0 +1,12 @@
+EDF V1: ContentType=syngo.MR.ExamDataFoundation.Data.EdfStringContent;
+{
+  "$id": "1",
+  "Dates": {
+    "$id": "2",
+    "en": "2018-07-17T13:35:14.3286962Z"
+  },
+  "Texts": {
+    "$id": "3",
+    "en": "Patient View"
+  }
+}

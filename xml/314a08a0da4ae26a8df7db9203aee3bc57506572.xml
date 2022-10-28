@@ -1,0 +1,12 @@
+EDF V1: ContentType=syngo.MR.ExamDataFoundation.Data.EdfStringContent;
+{
+  "$id": "1",
+  "Dates": {
+    "$id": "2",
+    "en": "2018-08-16T05:15:43.0676755Z"
+  },
+  "Texts": {
+    "$id": "3",
+    "en": "Please use same adjustment as first DTI sequence using Copy Reference, if this sequence needs to be redone please redo all DTI, they go together!"
+  }
+}
